@@ -2,7 +2,7 @@
   <div>
     <div class="tittle">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" />
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,25 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/201312/09/4e2e290c94390948b18fea721f6f15c3.jpg_200x200_ba194523.jpg',
-        title: '德萨斯水世界',
-        desc: '吴川鼎龙湾德萨斯水世界'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p84/201211/03/3ce0ab9db4b6bbeb93835fbb.jpg_200x200_2b25228d.jpg',
-        title: '湖光岩',
-        desc: '湖光神秘风情'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1709/51/51589722e6bf272ca3.water.jpg_200x200_0bd1d3c5.jpg',
-        title: '湛江红嘴鸥游船',
-        desc: '乘风破浪会有时'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

@@ -4,7 +4,7 @@
     <ul>
       <li
         class="item border-bottom"
-        v-for="item of recommendList"
+        v-for="item of list"
         :key="item.id"
       >
         <div class="item-img-wrapper">
@@ -22,25 +22,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1509/bc/50eb743f47cec5.jpg_r_640x214_fa1b0019.jpg',
-        title: '湛江必游TOP5',
-        desc: '中国海军南海舰队司令部所在地，够酷'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1509/c0/f4012cee4597dc.jpg_r_640x214_3db03479.jpg',
-        title: '湛江赏秋地儿',
-        desc: '浪漫秋季，来看看湛江哪儿适合秋游'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1505/4a/ac007012d54bd4.jpg_r_640x214_eefa6ade.jpg',
-        title: '湛江必游TOP5',
-        desc: '毓秀山水，继续着四季轮回的交替'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
@@ -54,7 +37,7 @@ export default {
   .item-img-wrapper
     overflow: hidden
     height: 0
-    padding-bottom: 33.44%
+    padding-bottom: 37.09%
     .item-img
       width: 100%
   .item-info
