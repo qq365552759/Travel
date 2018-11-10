@@ -44,10 +44,10 @@ export default {
       }
     }
   },
-  activated () {
+  mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
-  deactivated () {
+  unmounted () {
     window.removeEventListener('scroll', this.handleScroll)
   }
 }
@@ -74,7 +74,6 @@ export default {
     top: 0
     left: 0
     right: 0
-    overflow: hidden
     height: $headerHeight
     line-height: $headerHeight
     text-align: center
